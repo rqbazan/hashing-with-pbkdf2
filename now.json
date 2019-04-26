@@ -1,0 +1,29 @@
+{
+  "name": "hashing-with-pbkdf2",
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/*.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/backend/?text=$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+",
+      "headers": {
+        "cache-control": "immutable"
+      }
+    }
+  ]
+}
