@@ -6,9 +6,9 @@ import Hashing from './hashing'
 import { Container } from './elements'
 
 const Result = props => {
-  const { hashing, loading } = props
+  const { hashing, isLoading } = props
 
-  if (loading) {
+  if (isLoading) {
     return <Loader style={{ margin: '0 auto' }} />
   }
 
@@ -30,7 +30,7 @@ Result.defaultProps = {
 }
 
 Result.propTypes = {
-  loading: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   hashing: PropTypes.object
 }
 
