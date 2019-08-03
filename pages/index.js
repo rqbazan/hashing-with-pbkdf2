@@ -46,7 +46,7 @@ const HomePage = () => {
         onChange={setText}
         onEnterPress={() => setDebouncedText(text)}
       />
-      <Result hashing={hashing} loading={loading} />
+      <Result hashing={hashing} isLoading={loading} />
     </MainLayout>
   )
 }
