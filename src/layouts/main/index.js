@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Container } from './elements'
+import { Container, ContentContainer } from './elements'
 import Anchor from 'components/anchor'
 
 const MainLayout = props => {
@@ -8,13 +8,13 @@ const MainLayout = props => {
 
   return (
     <Container>
-      {children}
-      <span>
+      <ContentContainer>{children}</ContentContainer>
+      <p>
         Made with ❤️ for the people of the internet. By{' '}
         <Anchor href="https://github.com/rqbazan" target="_black">
           @rqbazan
         </Anchor>
-      </span>
+      </p>
     </Container>
   )
 }
