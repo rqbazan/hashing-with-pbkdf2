@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "components": ["./frontend/components"],
-      "hooks": ["./frontend/hooks"],
-      "layouts": ["./frontend/layouts"]
+      "components": ["./src/components"],
+      "hooks": ["./src/hooks"],
+      "layouts": ["./src/layouts"]
     }
   }
 }
