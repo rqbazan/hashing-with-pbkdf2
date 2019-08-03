@@ -6,10 +6,7 @@ import MainLayout from 'layouts/main'
 import useDebounce from 'hooks/use-debounce'
 
 const requestApi = text => {
-  const dev = process.env.NODE_ENV !== 'production'
-  const baseUrl = dev ? 'https://hashing-with-pbkdf2.rqbazan.now.sh' : ''
-
-  return fetch(`${baseUrl}/api/${text}`).then(res => res.json())
+  return fetch(`/api?text=${text}`).then(res => res.json())
 }
 
 const HomePage = () => {

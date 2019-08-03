@@ -48,7 +48,7 @@ class OwnDocument extends Document {
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/static/images/hash.png"
+          href="/static/images/favicon.png"
         />
         <body>
           <Main />

@@ -9,7 +9,7 @@ module.exports = {
     [
       'module-resolver',
       {
-        root: '.',
+        root: compilerOptions.baseUrl,
         alias: compilerOptions.paths
       }
     ]
