@@ -5,6 +5,7 @@ import { Container, Header, Content } from './elements'
 
 const Hashing = props => {
   const { header, content } = props
+
   const [isPressed, setIsPressed] = useState(false)
 
   return (
