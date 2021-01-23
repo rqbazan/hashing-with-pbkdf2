@@ -6,7 +6,7 @@
   let inputValue = ''
 </script>
 
-<div class="flex flex-col items-center p-6 max-w-3xl mx-auto h-full">
+<div class="flex flex-col items-center p-6 max-w-xl mx-auto h-full">
   <h1 class="text-3xl mb-6 text-center font-bold">Hashing w/ pbkdf2</h1>
   <div class="flex flex-col w-full space-y-6">
     <form class="flex flex-col w-full" spellcheck="false">
