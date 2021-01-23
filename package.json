@@ -1,5 +1,5 @@
 {
-  "name": "hashing-with-pbkdf2-and-svelte",
+  "name": "hashing-with-pbkdf2",
   "private": "true",
   "license": "MIT",
   "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
