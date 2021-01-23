@@ -1,6 +1,20 @@
 <script>
+  import CopyClipboard from './copy-clipboard.svelte'
+
   export let title
   export let content
+
+  const clipboard = document.getElementById('clipboard')
+
+  function copy() {
+    const app = new CopyClipboard({
+      target: clipboard,
+      props: {
+        value: content
+      }
+    })
+    app.$destroy()
+  }
 </script>
 
 <div class="rounded-md bg-meow text-dark w-full h-28">
@@ -8,7 +22,7 @@
     class="rounded-t-md w-full h-11 bg-pinky flex items-center justify-between p-4"
   >
     <h2 class="font-bold">{title}</h2>
-    <div class="text-dark magnify h-4 w-4" role="button">
+    <div class="text-dark magnify h-4 w-4" role="button" on:click={copy}>
       <svg
         viewBox="0 0 24 24"
         fill="none"

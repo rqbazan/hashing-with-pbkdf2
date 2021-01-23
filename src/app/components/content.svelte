@@ -14,12 +14,16 @@
   const debounced = debounce(async text => {
     query.status = statuses.FETCHING
 
-    const res = await fetch(`/api/?text=${text}`)
+    try {
+      const res = await fetch(`/api/?text=${text}`)
 
-    if (res.ok) {
-      query.data = await res.json()
-      query.status = statuses.SUCCESS
-    } else {
+      if (res.ok) {
+        query.data = await res.json()
+        query.status = statuses.SUCCESS
+      } else {
+        query.status = statuses.ERROR
+      }
+    } catch {
       query.status = statuses.ERROR
     }
   }, 500)
@@ -43,6 +47,8 @@
   <EmptyState message="typing..." />
 {:else if query.status === statuses.FETCHING}
   <EmptyState message="fetching..." />
+{:else if query.status === statuses.ERROR}
+  <EmptyState message="oops..." />
 {:else if query.status === statuses.SUCCESS}
   <OutputCard title="Random Salt" content={query.data.salt} />
   <OutputCard title="Hash" content={query.data.hash} />

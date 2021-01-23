@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col h-64 w-full">
-  <div class="h-64">
+  <div class="h-64 md:h-80">
     <img
       class="w-full h-full"
       src="/imgs/illustration.svg"
