@@ -7,7 +7,7 @@
     "dev": "run-p dev:*",
     "dev:web": "snowpack dev",
     "dev:api": "vercel dev",
-    "vercel-build": "snowpack build"
+    "build:web": "snowpack build"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
