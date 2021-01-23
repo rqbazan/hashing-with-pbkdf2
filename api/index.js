@@ -11,5 +11,5 @@ export default (req, res) => {
     .pbkdf2Sync(text, buffer, 10000, 64, 'sha1')
     .toString('base64')
 
-  res.json({ text, salt, hash })
+  res.json({ salt, hash })
 }
