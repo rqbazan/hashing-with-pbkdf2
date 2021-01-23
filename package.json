@@ -4,7 +4,9 @@
   "license": "MIT",
   "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
   "scripts": {
-    "dev": "yarn snowpack dev",
+    "dev": "run-p dev:*",
+    "dev:api": "vercel dev",
+    "dev:web": "snowpack dev",
     "build": "snowpack build"
   },
   "dependencies": {
