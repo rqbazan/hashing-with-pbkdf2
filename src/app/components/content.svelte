@@ -14,8 +14,7 @@
   const debounced = debounce(async text => {
     query.status = statuses.FETCHING
 
-    // prettier-ignore
-    const res = await fetch(`https://run.mocky.io/v3/c0a0a203-7c99-43ca-9478-5af806545ca8?text=${text}`)
+    const res = await fetch(`/api/?text=${text}`)
 
     if (res.ok) {
       query.data = await res.json()
