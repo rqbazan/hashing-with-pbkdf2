@@ -1,13 +1,12 @@
 {
   "name": "hashing-with-pbkdf2",
-  "private": "true",
+  "private": true,
   "license": "MIT",
   "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
   "scripts": {
     "dev": "run-p dev:*",
     "dev:web": "snowpack dev",
-    "dev:api": "vercel dev",
-    "build:web": "snowpack build"
+    "dev:api": "vercel dev"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",

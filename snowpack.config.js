@@ -21,8 +21,11 @@ module.exports = {
     }
   ],
   mount: {
-    public: { url: '/', static: true },
-    src: { url: '/dist' }
+    src: { url: '/dist' },
+    static: { url: '/', static: true }
+  },
+  buildOptions: {
+    out: 'public'
   },
   plugins: [
     [
