@@ -1,73 +1,25 @@
 {
   "name": "hashing-with-pbkdf2",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Ricardo Alexis Quiroz Bazan <raquirozbazan@gmail.com>",
+  "private": "true",
   "license": "MIT",
+  "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
   "scripts": {
-    "dev": "next",
-    "now-build": "next build",
-    "lint": "xo"
+    "dev": "snowpack dev",
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "dependencies": {
-    "next": "^9.0.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-copy-to-clipboard": "^5.0.1",
-    "react-dom": "^16.8.6",
-    "styled-components": "^5.0.0-beta.8",
-    "styled-components-breakpoint": "^2.1.1"
+    "lodash.debounce": "^4.0.8",
+    "svelte": "^3.24.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "babel-plugin-styled-components": "^1.10.6",
-    "eslint-config-xo": "^0.26.0",
-    "eslint-config-xo-react": "^0.20.0",
-    "eslint-import-resolver-babel-module": "^5.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.6.1",
-    "husky": "^3.0.2",
-    "xo": "^0.24.0"
-  },
-  "prettier": {
-    "bracketSpacing": true,
-    "semi": false,
-    "singleQuote": true
-  },
-  "xo": {
-    "extends": "xo-react",
-    "envs": [
-      "node",
-      "browser"
-    ],
-    "space": true,
-    "prettier": true,
-    "settings": {
-      "import/resolver": {
-        "babel-module": {}
-      }
-    },
-    "rules": {
-      "react/jsx-pascal-case": [
-        "error",
-        {
-          "allowAllCaps": true
-        }
-      ]
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
+    "@snowpack/plugin-svelte": "^3.5.0",
+    "autoprefixer": "^10.2.3",
+    "postcss": "^8.2.4",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.1.1",
+    "snowpack": "^3.0.1",
+    "svelte-preprocess": "^4.6.3",
+    "tailwindcss": "^2.0.2"
   }
 }
