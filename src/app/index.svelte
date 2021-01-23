@@ -29,6 +29,8 @@
   </div>
 </div>
 
+<div id="clipboard" />
+
 <style>
   :global(html, body) {
     @apply h-full;
