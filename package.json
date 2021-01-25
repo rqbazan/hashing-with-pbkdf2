@@ -4,10 +4,10 @@
   "license": "MIT",
   "author": "Ricardo Q. Bazan <raquirozbazan@gmail.com>",
   "scripts": {
-    "dev": "run-p dev:*",
+    "dev": "npm-p dev:*",
     "dev:api": "vercel dev",
     "dev:web": "snowpack dev",
-    "build": "snowpack build"
+    "vercel-build": "snowpack build"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
