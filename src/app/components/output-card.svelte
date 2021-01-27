@@ -1,8 +1,11 @@
 <script>
+  import { fade } from 'svelte/transition'
   import CopyClipboard from './copy-clipboard.svelte'
 
   export let title
   export let content
+
+  let showCopied = false
 
   const clipboard = document.getElementById('clipboard')
 
@@ -15,14 +18,27 @@
     })
     app.$destroy()
   }
+
+  function onCopyClick() {
+    copy()
+    showCopied = true
+    setTimeout(() => {
+      showCopied = false
+    }, 750)
+  }
 </script>
 
-<div class="rounded-md bg-meow text-dark w-full h-28">
-  <div
-    class="rounded-t-md w-full h-11 bg-pinky flex items-center justify-between p-4"
-  >
+<div
+  class="flex flex-col rounded-md bg-meow text-dark w-full min-h-28 select-none relative"
+>
+  <div class="rounded-t-md bg-pinky px-4 py-3">
     <h2 class="font-bold">{title}</h2>
-    <div class="text-dark magnify h-4 w-4" role="button" on:click={copy}>
+  </div>
+  <div class="btn flex h-6 items-center space-x-2 absolute right-4 top-3">
+    {#if showCopied}
+      <span transition:fade={{ duration: 200 }}>copied!</span>
+    {/if}
+    <div class="text-dark h-4 w-4" role="button" on:click={onCopyClick}>
       <svg
         viewBox="0 0 24 24"
         fill="none"
@@ -35,19 +51,13 @@
       >
     </div>
   </div>
-  <p class="p-4 break-words">{content}</p>
+  <div class="content p-4 h-full break-words">
+    <span>{content}</span>
+  </div>
 </div>
 
 <style>
-  .magnify {
-    transition: transform 250ms ease-in-out;
-  }
-
-  .magnify:hover {
-    transform: scale(1.3);
-  }
-
-  .magnify:active {
-    transform: scale(0.9);
+  .btn:active + .content > span {
+    @apply bg-green-200;
   }
 </style>
