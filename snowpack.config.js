@@ -7,13 +7,8 @@ const proxy = httpProxy.createServer({
   target: 'http://localhost:3000' // vercel default port on dev
 })
 
-/** @type {import("snowpack").SnowpackUserConfig } */
+/** @type {import("snowpack").SnowpackUserConfig} */
 module.exports = {
-  optimize: {
-    bundle: true,
-    minify: true,
-    target: 'es2018'
-  },
   routes: [
     {
       src: '/api/.*',
@@ -34,6 +29,7 @@ module.exports = {
           }
         })
       }
-    ]
+    ],
+    ['@snowpack/plugin-webpack']
   ]
 }
