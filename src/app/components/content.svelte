@@ -15,7 +15,7 @@
     query.status = statuses.FETCHING
 
     try {
-      const res = await fetch(`/api/?text=${text}`)
+      const res = await fetch(`/api/?text=${encodeURIComponent(text)}`)
 
       if (res.ok) {
         query.data = await res.json()
