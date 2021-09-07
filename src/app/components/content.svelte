@@ -1,8 +1,15 @@
 <script>
   import debounce from 'lodash.debounce'
-  import { statuses } from '../constants.js'
   import OutputCard from './output-card.svelte'
   import EmptyState from './empty-state.svelte'
+
+  const statuses = {
+    IDLE: 'idle',
+    SUCCESS: 'success',
+    FETCHING: 'fetching',
+    TYPING: 'typing',
+    ERROR: 'error'
+  }
 
   export let inputValue
 

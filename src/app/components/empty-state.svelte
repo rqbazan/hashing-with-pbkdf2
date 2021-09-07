@@ -6,7 +6,7 @@
   <div class="h-64 md:h-80">
     <img
       class="w-full h-full"
-      src="/imgs/illustration.svg"
+      src="/img/illustration.svg"
       alt="watching netflix"
     />
   </div>

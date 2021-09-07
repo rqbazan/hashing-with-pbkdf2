@@ -1,4 +1,4 @@
-.snowpack
-node_modules
-build
-.vercel
+/node_modules/
+/dist/
+.DS_Store
+*.log
