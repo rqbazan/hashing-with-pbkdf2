@@ -1,5 +1,4 @@
 <script>
-  import './tailwind.svelte'
   import Content from './components/content.svelte'
   import Footer from './components/footer.svelte'
 
